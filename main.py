@@ -69,7 +69,7 @@ class ViewPostHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-
+        ('/', MainPage),
         ('/blog', MainPage),
         ('/newpost', PostForm),
         webapp2.Route('/blog/<id:\d+>', ViewPostHandler)
